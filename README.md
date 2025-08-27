@@ -1,33 +1,67 @@
-# 🧑‍💼 Job Portal
+# Job Portal
 
-A full-stack **MERN Job Portal** application where recruiters can post jobs and candidates can apply.  
-Built using **MongoDB Atlas, Express, React (Vite), Node.js, and Socket.IO**.
-
----
-
-## ✨ Features
-
-- 👩‍💼 User authentication (signup & login)
-- 📢 Recruiters can **post, update, and delete jobs**
-- 📝 Applicants can **apply to jobs** with details (resume link, cover letter, etc.)
-- 💾 Data stored securely in **MongoDB Atlas**
-- 🔔 Real-time updates using **Socket.IO**
-- 🎨 Modern UI with **Material-UI (MUI)**
+A full-stack **Job Portal** application built with **MERN** (MongoDB, Express, React, Node.js) and **Socket.IO** for real-time updates. Users can browse and apply for jobs, and admins can view applications for each job.
 
 ---
 
-## 🛠 Tech Stack
+## Approach
 
-- **Frontend:** React + Vite + Material-UI  
-- **Backend:** Node.js + Express + Socket.IO  
-- **Database:** MongoDB Atlas (Mongoose ODM)  
-- **Package Manager:** npm / yarn  
+- **Frontend:** Built with React and React Router (using HashRouter) for smooth client-side routing. Axios is used to interact with the backend API, and Socket.IO-client enables real-time notifications.  
+- **Backend:** Node.js + Express API handles job listings, applications, and admin operations. Mongoose manages MongoDB Atlas database interactions.  
+- **Real-time Updates:** Socket.IO allows the admin to get live updates when new applications are submitted.  
+- **Deployment:** Backend and frontend are deployed on Render, and HashRouter ensures correct routing without 404 errors. Environment variables are used for API URLs and database credentials to separate configuration from code.
 
 ---
 
-## ⚙️ Setup Instructions
+## Features
 
-### 1. Clone the Repository
+- User dashboard to view and apply for jobs.  
+- Admin dashboard to view applications per job.  
+- Real-time notifications for new applications.  
+- MongoDB Atlas for data storage.  
+- Responsive UI using Material-UI.  
+
+---
+
+## Technologies
+
+- **Frontend:** React, React Router (HashRouter), Axios, Material UI, Socket.IO-client  
+- **Backend:** Node.js, Express, MongoDB (Mongoose), Socket.IO  
+- **Database:** MongoDB Atlas  
+- **Deployment:** Render  
+
+---
+
+## Setup & Run Locally
+
+### 1. Clone the repository
 ```bash
 git clone https://github.com/ssj317/JobPortal.git
 cd JobPortal
+
+## Backend setup
+cd backend
+npm install
+
+## start server
+node index.js
+
+## Frontend Setup
+cd ../frontend
+npm install
+
+## .env
+VITE_API_URL=http://localhost:5000/api
+
+## start server
+npm run dev
+
+##Access the Application
+
+User Dashboard: http://localhost:5173/
+Admin Dashboard: http://localhost:5173/#/admin
+
+##Deployed URLs
+
+Backend (Render): https://job-portal-backend-irlc.onrender.com/api
+Frontend (Render): https://job-portal-frontend-nztd.onrender.com
