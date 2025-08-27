@@ -43,6 +43,11 @@ cd JobPortal
 cd backend
 npm install
 
+## Backend .env
+PORT=5000
+MONGO_URI=mongodb://localhost:27017/jobPortal
+
+
 ## start server
 node index.js
 
